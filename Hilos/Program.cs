@@ -17,13 +17,15 @@ namespace Hilos
             Thread hilo2 = new Thread(ImprimirX);
             hilo2.Start();
 
+            //ImprimirX();
+          //  ImprimirY();
 
         }
 
         static void ImprimirY()
         {
             int contador = 1;
-            while (contador<1000)
+            while (contador<100000)
             {
                 Console.Write("Y");
                 contador++;
@@ -33,7 +35,7 @@ namespace Hilos
         static void ImprimirX()
         {
             int contador = 1;
-            while (contador < 1000)
+            while (contador < 100000)
             {
                 Console.Write("X");
                 contador++;
