@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Hilos
@@ -10,26 +11,32 @@ namespace Hilos
     {
         static void Main(string[] args)
         {
+            Thread hilo1 = new Thread(ImprimirY);
+            hilo1.Start();
 
-            ImprimirY();
-            ImprimirX();
+            Thread hilo2 = new Thread(ImprimirX);
+            hilo2.Start();
+
 
         }
 
         static void ImprimirY()
         {
-            while (true)
+            int contador = 1;
+            while (contador<1000)
             {
                 Console.Write("Y");
+                contador++;
             }
         }
 
         static void ImprimirX()
         {
-            while (true)
+            int contador = 1;
+            while (contador < 1000)
             {
                 Console.Write("X");
-
+                contador++;
             }
 
         }
